@@ -48,7 +48,6 @@ def launch(args, expire=0.0):
     base = args.base
     bran = args.bran
     httpPort = args.http
-    auth = args.auth
 
     listen = args.listen
 
@@ -82,7 +81,7 @@ def launch(args, expire=0.0):
 
     doers = [hbyDoer, obl]
 
-    doers += serving.setup(hby, alias=alias, httpPort=httpPort, hook=hook, auth=auth, listen=listen)
+    doers += serving.setup(hby, alias=alias, httpPort=httpPort, hook=hook, listen=listen)
 
     print(f"Kara Server listening on {httpPort}")
     directing.runController(doers=doers, expire=expire)

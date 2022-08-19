@@ -21,7 +21,7 @@ from kara.core import handling, basing
 logger = help.ogler.getLogger()
 
 
-def setup(hby, *, alias, httpPort, hook, auth, listen=False):
+def setup(hby, *, alias, httpPort, hook, listen=False):
     """ Setup serving package and endpoints
 
     Parameters:
@@ -29,7 +29,6 @@ def setup(hby, *, alias, httpPort, hook, auth, listen=False):
         alias (str): alias of the identifier representing this agent
         httpPort (int): external port to listen on for HTTP messages
         hook (str): URL of external web hook to notify of credential issuance and revocations
-        auth (str): alias or AID of external authority for contacts and credentials
         listen (bool): flag indicating whether the agent listens persistently or polls mailboxes
 
     """
